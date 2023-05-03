@@ -5,7 +5,7 @@
 
 ## 배포페이지
 
-**[영화 검색 사이트](https://vercel.com/devybecca/omdb-api/TPJZ47R8R53PRU5VHan7yRtprKW3)**
+**[영화 검색 사이트](https://omdb-api-filmise.vercel.app)**
 
 ## 요구사항
 
