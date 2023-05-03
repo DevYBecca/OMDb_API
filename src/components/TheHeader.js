@@ -1,4 +1,4 @@
-import { Component } from '../core/heropy';
+import { Component } from '../core/assets'
 
 export default class TheHeader extends Component {
   constructor() {
@@ -7,38 +7,38 @@ export default class TheHeader extends Component {
       state: {
         menus: [
           {
-            name: 'Search',
-            href: '#/',
+            name: 'SEARCH',
+            href: '#/'
           },
           {
-            name: 'Movie',
-            href: '#/movie?id=tt4520988',
+            name: 'RECOMMENDED',
+            href: '#/movie?id=tt2194499'
           },
           {
-            name: 'About',
-            href: '#/about',
-          },
-        ],
-      },
-    });
+            name: 'ABOUT',
+            href: '#/about'
+          }
+        ]
+      }
+    })
     window.addEventListener('popstate', () => {
-      this.render();
-    });
+      this.render()
+    })
   }
   render() {
     this.el.innerHTML = /* html */ `
       <a 
         href="#/" 
         class="logo">
-        <span>OMDbAPI</span>.COM
+        FILMISE
       </a>
       <nav>
         <ul>
           ${this.state.menus
-            .map((menu) => {
-              const href = menu.href.split('?')[0];
-              const hash = location.hash.split('?')[0];
-              const isActive = href === hash;
+            .map(menu => {
+              const href = menu.href.split('?')[0]
+              const hash = location.hash.split('?')[0]
+              const isActive = href === hash
               return /* html */ `
               <li>
                 <a 
@@ -47,14 +47,14 @@ export default class TheHeader extends Component {
                   ${menu.name}
                 </a>
               </li>
-            `;
+            `
             })
             .join('')}
         </ul>
       </nav>
-      <a href="#/about" class="user">
-        <img src="https://heropy.blog/css/images/logo.png" alt="User">
+      <a href="#/about">
+        <img src="https://i.esdrop.com/d/f/w3LVwhrrgU/NSJbPV8BJI.jpg" alt="User" class="user" />
       </a>
-    `;
+    `
   }
 }
