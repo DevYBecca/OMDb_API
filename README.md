@@ -47,6 +47,6 @@
 ## 1차 리팩토링(23.05.10)
 
 - 영화 검색 시 개봉년도, 타이틀을 출력하는 container 높이
-  - container의 height를 설정하고 타이틀이 두 줄을 넘어갈 경우 한 줄로 출력
+  - container의 height를 설정, 타이틀이 두 줄을 넘어갈 경우 한 줄로 출력
 - MovieItem, TheFooter, About, NotFound 등 전체적인 html 태그 수정
 - TheHeader에 있는 메뉴 중 Recommended가 영화 상세정보 출력 시 활성화되지 않도록 수정
